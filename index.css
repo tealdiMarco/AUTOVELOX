@@ -1,0 +1,111 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://img.freepik.com/premium-photo/road-nowhere-side-profile-road-mountains-background-includes-nature-trees_923558-3314.jpg");
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+#rilevatore{
+    width: 350px;
+    height: 250px;
+    background-color: red;
+    position:absolute;
+    z-index: 10;
+    top:40%;
+    left:20%;
+    opacity: 0.5;
+    position: relative;
+}
+
+.bordoRil{
+    width: 40px;
+    height: 40px;
+    border: 5px solid white;
+    position: absolute;
+}
+
+#alto_sinistra{
+    border-bottom: none;
+    border-right: none;
+}
+
+#alto_destra{
+    border-bottom: none;
+    border-left: none;
+    right: 0px;
+}
+
+#basso_destra{
+    border-top: none;
+    border-left: none;
+    bottom: 0px;
+    right: 0px;
+}
+
+#basso_sinistra{
+    border-top: none;
+    border-right: none;
+    bottom: 0px;
+}
+
+#mezzo{
+    width: 30px;
+    height: 30px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    top:30%;
+    left:48%;
+}
+
+.nuovaCorsa{
+    animation-name: avvicinamento;
+    animation-duration: 15s;
+}
+
+.nuovoRilevamento{
+    animation-name: rileva;
+    animation-duration: 5s;
+}
+
+@keyframes rileva {
+    0%{
+        transform: scale(1);
+    }
+
+    40%{
+        transform: scale(1);
+    }
+
+    50%{
+        background-color: red;
+        opacity: 0.5;
+    }
+
+    65%{
+        transform: scale(1.5);
+        background-color: white;
+        opacity: 1;
+    }
+
+    100%{
+        transform: scale(1);
+        background-color: red;
+        opacity: 0.5;
+    }
+}
+
+@keyframes avvicinamento {
+    0%{
+        transform: translate(0px, 0px) scale(1);
+    }
+
+    100%{
+        transform: translate(-400px,1000px) scale(40);
+
+    }
+}
+
